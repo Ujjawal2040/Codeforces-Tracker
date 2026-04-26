@@ -3,6 +3,7 @@ import { Search, TrendingUp, Award, Activity, Loader2 } from 'lucide-react';
 import { fetchUserData, fetchRecentSearches } from './api';
 import StatsCard from './components/StatsCard';
 import ContestTable from './components/ContestTable';
+import RatingChart from './components/RatingChart';
 
 function App() {
   const [handle, setHandle] = useState('');
@@ -124,6 +125,7 @@ function App() {
             />
           </div>
 
+          <RatingChart ratingHistory={data.ratingHistory} />
           <ContestTable ratingHistory={data.ratingHistory} />
         </div>
       )}
